@@ -1,0 +1,80 @@
+---
+title: Typography - Ferrocene Style Guide
+---
+
+<div class="col-lg-10 offset-lg-2 col-md-12 py-5">
+  <div class="container">
+    <h1 class="pb-4">Typography</h1>
+
+    <h2 id="font" class="pb-2">Raleway</h2>
+    <p>The open source font Raleway is used for marketing and product communications.</p>
+
+    <div class="dropdown pb-4">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="fontdownload" data-bs-toggle="dropdown" aria-expanded="false">
+        Download
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="fontdownload">
+        <li><a class="dropdown-item" href="/images/content/raleway-font.zip" download>.zip file</a></li>
+      </ul>
+    </div>
+
+    <div class="row mx-0 my-5 background-gray-50">
+      <div class="col-12 p-0 p-lg-5">
+        <p class="mb-0 typography text-break">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+        <p class="mb-5 typography text-break">abcdefghijklmnopqrstuvwxyz</p>
+        <hr>
+      </div>
+      <div class="row px-0 px-lg-5 justify-content-between align-items-start">
+        <div class="col-lg-6 col-md-12">
+          <p class="fonts fw-100 mb-0">Thin</p>
+          <p class="fonts fw-200 mb-0">ExtraLight</p>
+          <p class="fonts fw-300 mb-0">Light</p>
+          <p class="fonts fw-400 mb-0">Regular</p>
+          <p class="fonts fw-500 mb-0">Medium</p>
+          <p class="fonts fw-600 mb-0">SemiBold</p>
+          <p class="fonts fw-700 mb-0">Bold</p>
+          <p class="fonts fw-800 mb-0">ExtraBold</p>
+          <p class="fonts fw-900 mb-0">Black</p>
+        </div>
+        <div class="col-lg-6 col-md-12">
+          <p class="fonts fw-700 low-height mb-4">Back in June we delivered oxygen equipment of the same size.</p>
+          <p class="fw-600 mb-4">He smiled understandingly-much more than understandingly. It was one of those rare smiles with a quality of eternal reassurance in it, that you may come across four or five times in life. It faced--or seemed to face--the whole eternal world for an instant, and then concentrated on you with an irresistible prejudice in your favor. It understood you just as far as you wanted to be understood, believed in you as you would like to believe in yourself, and assured you that it had precisely the impression of you that, at your best, you hoped to convey.</p>
+          <p class="fw-600">And as I sat there brooding on the old, unknown world, I thought of Gatsby’s wonder when he first picked out the green light at the end of Daisy’s dock. He had come a long way to this blue lawn, and his dream must have seemed so close that he could hardly fail to grasp it. He did not know that it was already behind him, somewhere back in that vast obscurity beyond the city, where the dark fields of the republic rolled on under the night.</p>
+        </div>
+        <hr class="mb-5 mt-4">
+      </div>
+    </div>
+
+    <h2 id="monospace" class="pt-5">Space Mono</h2>
+    <p>The open source font Space Mono is used for code snippets and conveying other technical instructions or commands.</p>
+
+    <div class="dropdown mb-5">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="spacemonodownload" data-bs-toggle="dropdown" aria-expanded="false">
+      Download
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="spacemonodownload">
+      <li><a class="dropdown-item" href="/images/content/spacemono-font.zip" download>.zip file</a></li>
+    </ul>
+  </div>
+
+<% code("rust") do %>
+#[derive(Debug)]
+pub enum State {
+    Start,
+    Transient,
+    Closed,
+}
+  
+impl From<&'a str> for State {
+    fn from(s: &'a str) -> Self {
+        match s {
+            "start" => State::Start,
+            "closed" => State::Closed,
+            _ => unreachable!(),
+        }
+    }
+}
+<% end %>
+
+  </div>
+</div>

@@ -1,0 +1,55 @@
+<div class="sidebar col-lg-2 col-md-12 background-gray-50 px-4 px-lg-0">
+  <div class="text-center d-none d-lg-block">
+    <a class="navbar-brand" href="/">
+      <img class="mt-4" src="/images/logos/logo.svg" height="45" width="auto" alt="Ferrocene logo">
+      <p class="version">Style Guide v.1.0</p>
+    </a>
+  </div>
+
+  <div class="navbar navbar-expand-lg justify-content-between">
+
+    <a class="navbar-brand d-flex align-items-center d-lg-none" href="/">
+      <img class="ms-2" src="/images/logos/logo.svg" height="35" width="auto" alt="Ferrocene logo">
+      <p class="version ms-2">Style Guide v.1.0</p>
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="far fa-bars"></i>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div class="navbar-nav flex-column mt-3 mt-lg-0">
+          <div class="nav-item">
+            <a class="nav-link" href="/index.html" title="Introduction"><i class="far fa-sparkles"></i>Introduction</a>
+          </div>
+          <div class="nav-item">
+            <a class="nav-link" href="/logo.html" title="Logo"><i class="far fa-star"></i>Logo</a>
+          </div>
+          <div class="nav-item">
+            <a class="nav-link" href="/colors.html" title="Colors"><i class="far fa-palette"></i>Colors</a>
+          </div>
+          <div class="nav-item">
+            <a class="nav-link" href="/typography.html" title="Typography"><i class="far fa-text"></i>Typography</a>
+          </div>
+          <div class="nav-item">
+            <a class="nav-link" href="/graphics.html" title="Graphics"><i class="far fa-image"></i>Graphics</a>
+          </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+function setNavigation() {
+    let current_location = location.pathname.split('/')[1];
+    let menu_items = document.querySelector(".navbar-nav").getElementsByTagName("a");
+    if (current_location === "") return;
+    for (let i = 0, len = menu_items.length; i < len; i++) {
+      if (menu_items[i].getAttribute("href").indexOf(current_location) !== -1) {
+        menu_items[i].className += " active";
+      }
+    }
+  }
+setNavigation();
+</script>

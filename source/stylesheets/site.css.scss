@@ -1,0 +1,310 @@
+---
+---
+
+@charset "utf-8";
+@import "fonts";
+@import "bootstrap/bootstrap";
+@import "colors";
+@import "all";
+@import "highlighting";
+
+body {
+  font-family: "Raleway", sans-serif;
+  letter-spacing: 0.25px;
+}
+
+// Headers
+
+h1 {
+  font-size: 48px;
+  font-weight: 800;
+  color: #194E80;
+}
+
+h2 {
+  font-size: 30px;
+  font-weight: 700;
+  color: $gray-950;
+}
+
+// Paragraphs
+
+p {
+  color: $gray-950;
+}
+
+.low-height {
+  line-height: 56.35px;
+}
+
+.typography {
+  font-size: 30px;
+}
+
+.fonts {
+  font-size: 48px;
+}
+
+// Font weighs
+
+.fw {
+  &-100 {
+    font-weight: 100;
+  }
+  &-200 {
+    font-weight: 200;
+  }
+  &-300 {
+    font-weight: 300;
+  }
+  &-400 {
+    font-weight: 400;
+  }
+  &-500 {
+    font-weight: 500;
+  }
+  &-600 {
+    font-weight: 600;
+  }
+  &-700 {
+    font-weight: 700;
+  }
+  &-800 {
+    font-weight: 800;
+  }
+  &-900 {
+    font-weight: 900;
+  }
+}
+
+// Links
+
+.arrow-link {
+  font-size: 16px;
+  font-weight: bold;
+  color: $blue-600;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+
+  &:after {
+    content: "\f178";
+    font-family: "Font Awesome 5 Pro";
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 8px;
+    transition: 0.25s ease-in-out;
+    -webkit-transition: 0.25s ease-in-out;
+    -moz-transition: 0.25s ease-in-out;
+    -o-transition: 0.25s ease-in-out;
+  }
+
+  &:hover {
+    &:after {
+      margin-left: 12px;
+    }
+  }
+}
+
+// Sidebar and navigation
+
+.version {
+  color: #194E80;
+  font-size: 12px;
+  font-weight: 400;
+  margin-bottom: 0;
+}
+
+.sidebar {
+  overflow: hidden;
+  height: 100%;
+  position: fixed;
+}
+
+.navbar-brand img {
+  max-width: 100%;
+}
+
+.nav-link {
+  font-size: 18px;
+  font-weight: 600;
+  color: #194E80;
+  padding: 12px 0;
+  border-left: 8px solid transparent;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+
+  & i {
+    height: 24px;
+    width: auto;
+    margin-right: 15px;
+    margin-left: 5px;
+  }
+
+  &:hover {
+    border-left: 8px solid#194E80;
+    background-color: $blue-100;
+  }
+
+  &:active {
+    border-left: 8px solid#194E80;
+    background-color: $blue-100;
+  }
+
+  &.active {
+    border-left: 8px solid#194E80;
+    background-color: $blue-100;
+  }
+}
+
+.navbar-nav, .nav-item {
+  width: 100%;
+}
+
+// General
+
+.intro {
+  width: 100%;
+  max-width: 100%;
+  padding-top: 40px;
+  padding-bottom: 50px;
+}
+
+img, svg {
+  vertical-align: middle;
+  max-width: 100%;
+}
+
+.do {
+  color: #31AF87;
+  margin-right: 5px;
+}
+
+.dont {
+  color: #C53030;
+  margin-right: 5px;
+}
+
+.curved {
+  border-radius: 8px;
+}
+
+.inverted {
+  color: $white !important;
+}
+
+// Backgrounds
+
+.background {
+  &-white {
+    background-color: $white;
+  }
+  &-black {
+    background-color: $black;
+  }
+  &-gradient-dual {
+    background: $dual;
+  }
+  &-gradient-blue {
+    background: $blue;
+  }
+  &-gradient-dark-blue {
+    background: $dark-blue;
+  }
+  &-gradient-teal {
+    background: $teal;
+  }
+  &-gradient-light-teal {
+    background: $light-teal;
+  }
+}
+
+pre {
+  color: $white;
+  background-color: #1E1E1E;
+  padding: 20px 40px;
+}
+
+code {
+  font-family: "Space Mono", monospace !important;
+}
+
+// Color palettes
+
+.colors {
+
+  .color-overview {
+    transition: .1s linear;
+    display: flex;
+    border: 2px solid transparent;
+
+    .variable {
+      flex-grow: 2;
+      color: $gray-900;
+    }
+
+    .hex {
+      transition: .15s linear;
+      opacity: 0;
+      color: $gray-900;
+    }
+  }
+
+  .color-details {
+    display: none;
+    flex-wrap: wrap;
+
+    .color-details--section {
+      flex-grow: 2;
+      flex-basis: 50%;
+
+      .pass { color: #00830D; }
+      .fail { color: #C10611; }
+    }
+  }
+
+  // color-overview height + color-details height
+  .color-priority {
+    height: 128px;
+  }
+
+  &:hover {
+    .color-overview {
+      margin: 0 -8px 0 0;
+      transition: .15s linear;
+    }
+
+    > .color-details {
+      display: flex;
+    }
+
+  }
+}
+
+.palette {
+  &:hover {
+    .color-priority {
+      height: auto;
+    }
+    .hex {
+      opacity: 1;
+    }
+  }
+}
+
+// Media queries
+
+@media (max-width: 991.98px) { 
+  .sidebar {
+    position: relative;
+    height: auto !important;
+  }
+  .nav-link { 
+    border-left: none !important;
+
+    & i {
+      margin-left: 15px !important;
+    }
+  }
+}
